@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import CoolButton from "./CoolButton.js";
 
 class Navbar extends Component {
   render() {
     return (
       <nav className="navbar is-transparent">
         <div className="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
+          <a className="navbar-item" href="https://bulma.io">
             <img
               src="https://bulma.io/images/bulma-logo.png"
               alt="Bulma: a modern CSS framework based on Flexbox"
@@ -14,7 +15,7 @@ class Navbar extends Component {
             />
           </a>
           <div
-            class="navbar-burger burger"
+            className="navbar-burger burger"
             data-target="navbarExampleTransparentExample"
           >
             <span />
@@ -23,41 +24,41 @@ class Navbar extends Component {
           </div>
         </div>
 
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="https://bulma.io/">
+        <div id="navbarExampleTransparentExample" className="navbar-menu">
+          <div className="navbar-start">
+            <a className="navbar-item" href="https://bulma.io/">
               Home
             </a>
           </div>
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="field is-grouped">
-                <p class="control">
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="field is-grouped">
+                <CoolButton
+                  isSmall
+                  isDanger
+                  className="is-rounded my-class control"
+                  value="Login"
+                >
                   <a
-                    class="bd-tw-button button"
+                    className="bd-tw-button button"
                     data-social-network="Twitter"
                     data-social-action="tweet"
                     data-social-target="http://localhost:4000"
                     target="_blank"
                     href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms"
                   >
-                    <span class="icon">
-                      <i class="fab fa-twitter" />
+                    <span className="icon">
+                      <i className="fab fa-twitter" />
                     </span>
-                    <span>Login</span>
+                    <span />
                   </a>
-                </p>
-                <p class="control">
-                  <a
-                    class="button is-primary"
-                    href="https://github.com/jgthms/bulma/releases/download/0.7.5/bulma-0.7.5.zip"
-                  >
-                    <span class="icon">
-                      <i class="fas fa-download" />
-                    </span>
-                    <span>Sign-up</span>
-                  </a>
-                </p>
+                </CoolButton>
+                <CoolButton
+                  isSmall
+                  isDanger
+                  className="is-rounded my-class control"
+                  value="Sign-up"
+                />
               </div>
             </div>
           </div>
@@ -66,5 +67,7 @@ class Navbar extends Component {
     );
   }
 }
+
+<CoolButton isSmall isSuccess value="Button 2" />;
 
 export default Navbar;
